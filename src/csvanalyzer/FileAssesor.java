@@ -4,7 +4,6 @@ import java.util.*;
 import java.io.File; 
 import java.io.FileNotFoundException;
 
-import javax.xml.crypto.Data; 
 
 public class FileAssesor {
 
@@ -71,28 +70,27 @@ public class FileAssesor {
         }
     }
 
-    private Dictionary<String, DataRow> mapRowData(String[] rowDataContent, int rowNumY)
+    private List<DataRow> mapRowData(String[] rowDataContent, int rowNumY)
     {
         try 
         {
+            List<DataRow> rowInformation = new ArrayList<DataRow>();
             if(rowDataContent.length == 0) { throw new Exception("Empty array"); }
             int rowNumX = 0;
-            Dictionary<String, DataRow> dictRow = new Hashtable<>();
 
             for(String content: rowDataContent)
             {
-                DataRow rowCordination = new DataRow(rowNumY, rowNumX);
-                dictRow.put(content, rowCordination);
-                System.out.println(dictRow);
+                DataRow rowData = new DataRow(rowNumY, rowNumX, content);
+                rowInformation.add(rowData);
                 rowNumX++;
             } 
 
-            return dictRow;
+            return rowInformation;
         }
         catch(Exception e)
         {
             System.out.println("Error: " + e);
-            return new Hashtable<>();
+            return new ArrayList<DataRow>();
         }
     }
 
