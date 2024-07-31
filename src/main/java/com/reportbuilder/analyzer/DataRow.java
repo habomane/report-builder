@@ -1,6 +1,6 @@
-package csvanalyzer;
+package com.reportbuilder.analyzer;
 
-public class DataRow 
+public class DataRow
 {
     public int Column;
     public int Row;

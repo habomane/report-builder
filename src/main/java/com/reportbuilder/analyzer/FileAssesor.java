@@ -1,9 +1,8 @@
-package csvanalyzer;
+package com.reportbuilder.analyzer;
 
 import java.util.*;
-import java.io.File; 
+import java.io.File;
 import java.io.FileNotFoundException;
-
 
 public class FileAssesor {
 
@@ -29,21 +28,21 @@ public class FileAssesor {
 
     private void readFilePath()
     {
-        try 
+        try
         {
             int lineNumber = 0;
             File targetFile = new File(this.filepath);
             if(!targetFile.exists()) { throw new FileNotFoundException("Could not locate file"); }
-            
+
             Scanner fileReader = new Scanner(targetFile);
             while(fileReader.hasNextLine())
-            {   
+            {
                 String rowData = fileReader.nextLine();
                 String[] rowItems = this.getRowItems(rowData, lineNumber);
-                var fileRowLine = this.mapRowData((rowItems), lineNumber);
+                List<DataRow> fileRowLine = this.mapRowData((rowItems), lineNumber);
 
                 lineNumber++;
-                
+
             }
 
             fileReader.close();
@@ -52,12 +51,12 @@ public class FileAssesor {
         {
             System.out.println("Error: " + error.getMessage());
         }
-    }   
+    }
 
     private String[] getRowItems(String currentLine, int rowNum)
     {
-        try 
-        {   
+        try
+        {
             if(currentLine.isEmpty()) { return new String[0]; }
 
             String[] rowSplit = currentLine.split(",");
@@ -72,7 +71,7 @@ public class FileAssesor {
 
     private List<DataRow> mapRowData(String[] rowDataContent, int rowNumY)
     {
-        try 
+        try
         {
             List<DataRow> rowInformation = new ArrayList<DataRow>();
             if(rowDataContent.length == 0) { throw new Exception("Empty array"); }
@@ -83,7 +82,7 @@ public class FileAssesor {
                 DataRow rowData = new DataRow(rowNumY, rowNumX, content);
                 rowInformation.add(rowData);
                 rowNumX++;
-            } 
+            }
 
             return rowInformation;
         }
@@ -95,5 +94,6 @@ public class FileAssesor {
     }
 
 }
+
 
 
