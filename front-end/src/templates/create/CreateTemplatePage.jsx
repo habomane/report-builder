@@ -7,7 +7,7 @@ function CreateTemplatePage() {
 
   const [isDropped, setIsDropped] = useState(false);
   const draggableMarkup = (
-    <Toolbox>Drag me</Toolbox>
+    <Toolbox></Toolbox>
   );
 
   function handleDragEnd(event) {
@@ -23,7 +23,7 @@ function CreateTemplatePage() {
        <ReportBuilder>
        {isDropped ? draggableMarkup : 'Drop here'}
          </ReportBuilder>
-         {!isDropped ? draggableMarkup : null}
+         <Toolbox />
         </DndContext> 
       </main>
     )
