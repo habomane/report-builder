@@ -1,6 +1,5 @@
 import { mockTemplates } from "./mocks/AllTemplate";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 // // Components
 import ListTemplateItem from "./components/ListTemplateItem";
 
