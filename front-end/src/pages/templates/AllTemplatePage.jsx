@@ -1,7 +1,7 @@
 import { mockTemplates } from "../../mocks/AllTemplate";
 import { Link } from "react-router-dom";
 // // Components
-import ListTemplateItem from "../../components/ListTemplateItem";
+import ListTemplateItem from "../../components/template/ListTemplateItem";
 
 function AllTemplatePage() {
   const pageHeader = "All Templates";

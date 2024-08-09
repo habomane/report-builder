@@ -1,11 +1,10 @@
 import { useDraggable } from "@dnd-kit/core";
-import { CSS } from "@dnd-kit/utilities";
 
 // Within your component that receives `transform` from `useDraggable`:
 
-function TableReportOption(props) {
+function TextReportOption() {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({
-    id: "draggable1",
+    id: "draggable",
   });
   const style = transform
     ? {
@@ -34,4 +33,4 @@ function TableReportOption(props) {
   );
 }
 
-export default TableReportOption;
+export default TextReportOption;

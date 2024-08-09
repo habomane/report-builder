@@ -1,4 +1,4 @@
-import { TemplateItem } from "../Template";
+import { TemplateItem } from "../models/template/Template";
 
 export const mockTemplates = [
     new TemplateItem(
