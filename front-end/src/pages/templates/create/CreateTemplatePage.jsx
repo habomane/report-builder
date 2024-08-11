@@ -2,9 +2,9 @@ import { DndContext } from "@dnd-kit/core";
 import { useState } from "react";
 // Components
 import Table from "../../../components/report-options/Table";
-import Toolbox from "../../../components/template/Toolbox";
-import ReportBuilder from "../../../components/template/ReportBuilder";
-import ReportSettings from "../../../components/template/ReportSettings";
+import Toolbox from "../../../components/report-structure/Toolbox";
+import ReportBuilder from "../../../components/report-structure/ReportBuilder";
+import ReportSettings from "../../../components/report-structure/ReportProperties";
 function CreateTemplatePage() {
   const [propertiesActive, setPropertiesActive] = useState(false);
   const [toolboxActive, setToolboxActive] = useState(true);

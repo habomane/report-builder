@@ -11,5 +11,6 @@ export const ReportType = {
     A7: new ReportDimension(7.4, 10.5), 
     A8: new ReportDimension(5.2, 7.4), 
     A9: new ReportDimension(3.7, 5.2), 
-    A10: new ReportDimension(2.6, 3.7)
+    A10: new ReportDimension(2.6, 3.7),
+    Custom: new ReportDimension(0, 0)
 }
