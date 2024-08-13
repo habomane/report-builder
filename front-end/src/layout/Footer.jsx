@@ -2,7 +2,7 @@
 
 function Footer() {
   return (
-    <footer className="bg-lighterBlack p-4 text-sm text-tan font-light text-center">
+    <footer className="bg-red-400 h-[100%] p-4 text-sm text-center">
       footer
     </footer>
   );

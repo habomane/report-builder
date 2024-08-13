@@ -11,9 +11,14 @@ function ReportBuilder(props)
   const mockReportProperites = new ReportProperties("Name Example", ReportType.A1, ReportType.A1.getWidthPixels(), ReportType.A1.getHeightPixels())
   return (
     <>
-    <div>
+    <div className='w-[100%]'>
         <h1>Report Builder</h1>
-        <Canvas reportProperties={mockReportProperites}></Canvas>
+        <div className="bg-gray-600 overflow-scroll overflow-y-scroll bg-opacity-40 w-[1000px] h-[300px]">
+        <div className=" flex justify-center align-center ">
+          <Canvas reportProperties={mockReportProperites}></Canvas>
+        </div>
+        </div>
+
     </div>
     </>
   );
